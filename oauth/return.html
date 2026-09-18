@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI秘書 - Googleから戻っています</title>
+<style>
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:#f4f6fb;color:#1a2233;margin:0;padding:24px;line-height:1.75}
+  .card{max-width:520px;margin:0 auto;background:#fff;border:1px solid #dfe3ee;border-radius:16px;padding:28px}
+  h1{font-size:18px;margin:0 0 12px}p{color:#3c4658;font-size:15px}
+  a.btn{display:block;text-align:center;padding:14px;font-weight:700;color:#fff;background:#3a4ea1;border-radius:10px;text-decoration:none;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Googleから戻っています…</h1>
+  <p>そのまま少々お待ちください。自動で次の画面に進みます。</p>
+  <div id="f"></div>
+</div>
+<script>
+// Googleの許可画面からの戻り先。script.google.com を直接の戻り先にすると、複数のGoogleアカウントで
+// ログインしているブラウザでは「アカウントの切り替え」ページに飛ばされて止まる（authuser の相性問題・2026-09-18）。
+// このページが code / state だけを受け取り、AI秘書のハブ（Apps Script）へ転送する。値は保存しない。
+(function () {
+  var HUB = 'https://script.google.com/macros/s/AKfycbxR1vHi-ffZXLZ-RUA0Ipa1RVRiSdtdrMGhBb14Udgc1tFe4WOOW3DQJvRG4KGWyEV6Fg/exec';
+  var q = new URLSearchParams(location.search);
+  var out = new URLSearchParams();
+  ['code', 'state', 'error', 'scope'].forEach(function (k) { if (q.get(k)) out.set(k, q.get(k)); });
+  var f = document.getElementById('f');
+  if (!out.get('state')) {
+    f.innerHTML = '<p>必要な情報が届きませんでした。LINEに戻って「Googleを繋ぐ」をもう一度送ってください。</p>';
+    return;
+  }
+  var url = HUB + '?' + out.toString();
+  f.innerHTML = '<a class="btn" href="' + url.replace(/"/g, '&quot;') + '">自動で進まないときは、ここを押してください</a>';
+  location.replace(url);
+})();
+</script>
+</body>
+</html>
