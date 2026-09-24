@@ -32,6 +32,18 @@ python3 -c "import cv2; print(cv2.QRCodeDetector().detectAndDecode(cv2.imread('i
 > LINE公式アカウントマネージャーからダウンロードできる「LINEロゴ入りの公式QR」に
 > 差し替えても構いません。同じURLを指していれば動きは変わりません。
 
+## ホームページ・プライバシーポリシー（Googleの審査用・2026-09-24）
+
+| ファイル | 公開URL | 用途 |
+|---|---|---|
+| `index.html` | `https://taisei-ctrl.github.io/ai-hisho-assets/` | OAuth同意画面の「アプリのホームページ」 |
+| `privacy.html` | `https://taisei-ctrl.github.io/ai-hisho-assets/privacy.html` | OAuth同意画面の「プライバシーポリシー」 |
+| `oauth/return.html` | `https://taisei-ctrl.github.io/ai-hisho-assets/oauth/return.html` | Googleログインの戻り先（転送ページ） |
+
+黄色の【…】（運営者名・所在地・連絡先・制定日）を埋めてから main に入れること。
+Googleのデータの使い方を変えたら、`privacy.html` と Google Cloud の申請内容も同時に直す（食い違うと審査が止まる）。
+申請の手順と提出文は momo-hub の `GOOGLE_VERIFICATION.md`。
+
 ## 参照のしかた
 
 ハブ側（GAS）のスクリプトプロパティ `ICON_BASE_URL` に、

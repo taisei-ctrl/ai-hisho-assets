@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI秘書 | LINEで使えるあなた専用の秘書</title>
+<meta name="description" content="AI秘書は、LINEで話しかけるだけで、Googleカレンダーの予定とGoogle ToDoリストをまとめて知らせてくれる秘書サービスです。">
+<style>
+  :root{--bg:#f4f6fb;--card:#fff;--line:#dfe3ee;--text:#1a2233;--sub:#3c4658;--accent:#3a4ea1;--todo:#fff7d6}
+  @media (prefers-color-scheme: dark){:root{--bg:#12151c;--card:#1b1f29;--line:#2c3342;--text:#e8ebf2;--sub:#b5bccb;--accent:#8fa0ea;--todo:#3a3420}}
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:var(--bg);color:var(--text);margin:0;padding:24px 16px;line-height:1.8}
+  main{max-width:720px;margin:0 auto}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin:0 0 16px}
+  header{display:flex;align-items:center;gap:16px;margin:8px 0 20px}
+  header img{width:64px;height:64px;border-radius:50%}
+  h1{font-size:24px;margin:0}h2{font-size:18px;margin:0 0 8px}
+  p,li{color:var(--sub);font-size:15px}ul{padding-left:1.2em;margin:8px 0}
+  a{color:var(--accent)}
+  .en{font-size:14px}
+  .todo{background:var(--todo);padding:0 4px;border-radius:4px}
+  footer{text-align:center;font-size:13px;color:var(--sub);margin:24px 0}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icons/symbol.png" alt="AI秘書のマーク" width="64" height="64">
+    <div>
+      <h1>AI秘書</h1>
+      <p style="margin:0">LINEで話しかけるだけの、あなた専用の秘書</p>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>できること</h2>
+    <ul>
+      <li>毎朝・夕方など決まった時刻に、LINEで「今日の予定」と「やること（ToDo）」をまとめてお知らせします。</li>
+      <li>「明日の予定は?」「ToDo見せて」とLINEで聞くと、Googleカレンダーと Google ToDo リストを見て答えます。</li>
+      <li>「来週火曜の15時に打ち合わせを入れて」「請求書を送る、をToDoに足して」と頼むと、代わりに登録します（ご本人が「いろいろ任せる」を選んだ場合のみ）。</li>
+      <li>期限の近いToDoや、予定の重なりに気づいたらお知らせします。</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>使い方</h2>
+    <ol>
+      <li>LINEで「AI秘書」を友だち追加します。</li>
+      <li>案内に沿って、使うGoogleアカウントのアドレスと、そのアカウントを何に使っているか（カレンダー／ToDo）を選びます。</li>
+      <li>届いたリンクを開き、Googleの画面で内容を確かめて「許可」を押します。AI秘書が求めるのは、選んだ用途の分の許可だけです。</li>
+      <li>あとは LINE で話しかけるだけです。</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Googleのデータの扱い</h2>
+    <p>AI秘書は、ご本人が許可したGoogleアカウントの <b>カレンダーの予定</b> と <b>ToDoリスト</b> を、ご本人へのお知らせと、ご本人に頼まれた登録・変更のためだけに使います。
+      広告に使ったり、第三者に販売したり、AIの学習に使ったりすることはありません。
+      許可はいつでも取り消せます（LINEで「接続を外す」、または <a href="https://myaccount.google.com/permissions">Googleアカウントの設定</a>）。</p>
+    <p>くわしくは <a href="privacy.html">プライバシーポリシー</a> をご覧ください。</p>
+  </section>
+
+  <section class="card en" lang="en">
+    <h2>About AI Hisho (English)</h2>
+    <p>AI Hisho ("AI Secretary") is a personal secretary service used through LINE messenger. With the user's permission, it reads the user's Google Calendar events and Google Tasks to send daily schedule and to-do summaries in LINE, answers questions such as "What's on my calendar tomorrow?", and — only if the user chooses the "delegate" option — adds or updates calendar events and tasks when the user asks.
+      Google user data is used only to provide these user-facing features. It is never sold, used for advertising, or used to train AI models. See our <a href="privacy.html#en">Privacy Policy</a>.</p>
+  </section>
+
+  <section class="card">
+    <h2>運営者・お問い合わせ</h2>
+    <p>運営: <span class="todo">【運営者名】</span><br>
+      お問い合わせ: <span class="todo">【お問い合わせ先メールアドレス】</span></p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">プライバシーポリシー / Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>
