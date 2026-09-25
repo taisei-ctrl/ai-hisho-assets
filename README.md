@@ -47,3 +47,11 @@ python3 -c "import cv2; print(cv2.QRCodeDetector().detectAndDecode(cv2.imread('i
 - LINEのトーク画面では丸く小さく表示されるため、`icons/1〜8.png` は顔が円いっぱいに入るよう拡大切り抜き済み（さくらのアイコンと同程度）。
 - 元画像は `icons/original/` に保存。切り抜き位置（顔の中心と枠の大きさ）は momo-hub 側の作業記録（HANDOFF.md）を参照。
 - `faces.png`（選択用の一覧）は元の構図のまま。
+
+## legal/
+
+| ファイル | 用途 |
+|---|---|
+| `tokushoho.html` | 特定商取引法に基づく表記。URL `https://taisei-ctrl.github.io/ai-hisho-assets/legal/tokushoho.html` をハブの専用ページ（`?admin=…&setsquare=1`）の「特定商取引法に基づく表記のURL」に保存すると、「申し込む」の案内文に載る |
+
+料金・無料期間・解約の書き方は momo-hub の `hub.js`（`signupMessage_` など）と揃えること。片方だけ変えない。
