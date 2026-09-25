@@ -47,3 +47,7 @@ python3 -c "import cv2; print(cv2.QRCodeDetector().detectAndDecode(cv2.imread('i
 - LINEのトーク画面では丸く小さく表示されるため、`icons/1〜8.png` は顔が円いっぱいに入るよう拡大切り抜き済み（さくらのアイコンと同程度）。
 - 元画像は `icons/original/` に保存。切り抜き位置（顔の中心と枠の大きさ）は momo-hub 側の作業記録（HANDOFF.md）を参照。
 - `faces.png`（選択用の一覧）は元の構図のまま。
+
+## 案内用の画面画像（2026-09-25）
+- `guide/chatwork/1〜4.jpg`: Chatworkの API トークンの取り方（①右上のアイコン ②サービス連携 ③APIトークン ④コピー）。本人作成。
+  `*_s.jpg` は LINE の画像メッセージ用プレビュー（1MB以下）。ハブ側は `GUIDE_BASE_URL`（未設定なら ICON_BASE_URL の `/icons` を `/guide` に置き換え）で参照。
